@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  php-fpm:
+    build:
+      context: .
+      dockerfile: ./docker/php-fpm/Dockerfile
+    container_name: docker-test_php-fpm
+    volumes:
+      - ./magento:/home/psyduck/magento
