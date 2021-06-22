@@ -1,4 +1,11 @@
 FROM php:7.4.19-fpm-alpine
 
-# Switch to user www-data is created in php-fpm image with id 82
-USER www-data
+ARG USER
+
+RUN addgroup -g $USER lopata
+
+RUN adduser -S -G lopata -u $USER lopata
+
+COPY --chown=$USER:82 ./magento /magento
+
+USER lopata

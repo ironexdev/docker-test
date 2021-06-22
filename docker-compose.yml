@@ -5,7 +5,8 @@ services:
     build:
       context: .
       dockerfile: ./docker/php-fpm/Dockerfile
+      args:
+        USER: 1000
     container_name: docker-test_php-fpm
-    user: "www-data:www-data"
     volumes:
       - ./magento:/magento
