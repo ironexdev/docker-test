@@ -7,4 +7,4 @@ services:
       dockerfile: ./docker/php-fpm/Dockerfile
     container_name: docker-test_php-fpm
     volumes:
-      - ./magento:/home/psyduck/magento
+      - ./magento:/magento
