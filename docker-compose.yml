@@ -6,5 +6,6 @@ services:
       context: .
       dockerfile: ./docker/php-fpm/Dockerfile
     container_name: docker-test_php-fpm
+    user: "www-data:www-data"
     volumes:
       - ./magento:/magento
