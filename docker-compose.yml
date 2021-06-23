@@ -3,6 +3,9 @@ version: "3.9"
 services:
   php-fpm:
     build:
+      args:
+        GROUP_ID: $GROUP_ID
+        USER_ID: $USER_ID
       context: .
       dockerfile: ./docker/php-fpm/Dockerfile
     container_name: docker-test_php-fpm
