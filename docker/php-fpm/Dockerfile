@@ -1,1 +1,3 @@
 FROM php:7.4.19-fpm-alpine
+
+USER www-data
